@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="calculator-box">
+
+    <div class="input-box">
+      <form id="dataInput" action="index.html" method="post">
+        <img class="icon-dollar" src="images/icon-dollar.svg" alt="">
+        <label for="sumInput">Bill</label>
+        <input id="sumInput" type="text" name="sum" placeholder="0">
+
+
+        <p class="labelForTipInput">Select Tip %</p>
+        <div class="tip-selector">
+          <input id="val5" type="button" name="tipValue" value="5%">
+          <input id="val10" type="button" name="tipValue" value="10%">
+          <input id="val15" type="button" name="tipValue" value="15%">
+          <input id="val25" type="button" name="tipValue" value="25%">
+          <input id="val50" type="button" name="tipValue" value="50%">
+          <input id="valCustom" type="text" name="tipValue" placeholder="Custom">
+        </div>
+
+        <img class="icon-person" src="images/icon-person.svg" alt="">
+        <label for="numberOfPeopleInput">Number of People</label>
+        <input id="numberOfPeopleInput" type="text" name="numberOfPeople" placeholder="0">
+
+
+      </form>
+    </div>
+
+    <div class="output-box">
+
+      <div class="output-line">
+
+        <div class="output-label">
+          <p class="biggerText">Tip Amount</p>
+          <p class="smallerText">/ person</p>
+        </div>
+        <output form="dataInput" for="sumInput val5 val10 val15 val25 val50 valCustom numberOfPeopleInput" name="resultTipPerPerson">$0.00</output>
+      </div>
+
+
+      <div class="output-line">
+
+        <div class="output-label">
+          <p class="biggerText">Total</p>
+          <p class="smallerText">/ person</p>
+        </div>
+
+        <output form="dataInput" for="sumInput val5 val10 val15 val25 val50 valCustom numberOfPeopleInput" name="resultTotalPerPerson">$0.00</output>
+
+      </div>
+
+      <button type="reset" form="dataInput" name="button">Reset</button>
+
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
