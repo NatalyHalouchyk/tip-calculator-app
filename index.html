@@ -20,35 +20,49 @@
 </head>
 
 <body>
+<div class="content-wrapper">
+
+
+<h2>SPLI<br/>TTER</h2>
 
   <div class="calculator-box">
 
-    <div class="input-box">
+    <div class="input-side-wrapper">
       <form id="dataInput" action="index.html" method="post">
-        <img class="icon-dollar" src="images/icon-dollar.svg" alt="">
-        <label for="sumInput">Bill</label>
-        <input id="sumInput" type="text" name="sum" placeholder="0">
 
-
-        <p class="labelForTipInput">Select Tip %</p>
-        <div class="tip-selector">
-          <input id="val5" type="button" name="tipValue" value="5%">
-          <input id="val10" type="button" name="tipValue" value="10%">
-          <input id="val15" type="button" name="tipValue" value="15%">
-          <input id="val25" type="button" name="tipValue" value="25%">
-          <input id="val50" type="button" name="tipValue" value="50%">
-          <input id="valCustom" type="text" name="tipValue" placeholder="Custom">
+        <div class="input-line">
+          <img class="icon-dollar" src="images/icon-dollar.svg" alt="">
+          <label for="sumInput">Bill</label>
+          <input id="sumInput" type="text" name="sum" placeholder="0">
         </div>
 
-        <img class="icon-person" src="images/icon-person.svg" alt="">
-        <label for="numberOfPeopleInput">Number of People</label>
-        <input id="numberOfPeopleInput" type="text" name="numberOfPeople" placeholder="0">
+        <div class="input-line">
+          <label>Select Tip %</label>
+          <div class="tip-selector">
+            <input id="val5" type="button" name="tipValue" value="5%">
+            <input id="val10" type="button" name="tipValue" value="10%">
+            <input id="val15" type="button" name="tipValue" value="15%">
+            <input id="val25" type="button" name="tipValue" value="25%">
+            <input id="val50" type="button" name="tipValue" value="50%">
+            <input id="valCustom" type="text" name="tipValue" placeholder="Custom">
+          </div>
+        </div>
+
+
+        <div class="input-line">
+          <img class="icon-person" src="images/icon-person.svg" alt="">
+          <div class="hiddenWarningLine">
+            <label for="numberOfPeopleInput">Number of People</label>
+            <span class="warning">Can't be zero</span>
+          </div>
+          <input id="numberOfPeopleInput" type="text" name="numberOfPeople" placeholder="0">
+        </div>
 
 
       </form>
     </div>
 
-    <div class="output-box">
+    <div class="output-side-wrapper">
 
       <div class="output-line">
 
@@ -76,11 +90,7 @@
     </div>
 
   </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</div>
 </body>
 
 </html>
