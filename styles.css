@@ -1,48 +1,44 @@
 body {
-  height: 100vh;
   background-color: hsl(185, 41%, 84%);
   font-family: 'Space Mono', monospace;
   font-size: 14px;
   font-weight: 700;
 }
 
-h2{
-  color:hsl(183, 100%, 15%);
+h2 {
+  color: hsl(183, 100%, 15%);
   text-align: center;
   letter-spacing: 0.4rem;
-  margin: 0 0 50px;
-  }
+  margin: 0 auto 50px;
+}
 
 label {
   display: inline-block;
   padding-bottom: 10px;
 }
 
-
-
 /* Layouts */
-
-.content-wrapper{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.content-wrapper {
+  margin: 7% auto;
 }
 
 .calculator-box {
   display: flex;
   width: 56vw;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2%;
   gap: 3%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 12px;
+
 }
 
-@media (max-width: 1090px){
-  .calculator-box{
+@media (max-width: 1090px) {
+  .calculator-box {
+    width: 78vw;
     flex-direction: column;
     justify-content: space-between;
-    /* position: relative; */
   }
 }
 
@@ -57,7 +53,7 @@ label {
   margin-bottom: 30px;
 }
 
-.input-line:last-of-type{
+.input-line:last-of-type {
   margin-bottom: 0;
 }
 
@@ -68,7 +64,7 @@ label {
   grid-gap: 8px;
 }
 
-.hiddenWarningLine{
+.hiddenWarningLine {
   display: flex;
   justify-content: space-between;
 }
@@ -80,6 +76,12 @@ label {
   padding: 5%;
   background-color: hsl(183, 100%, 15%);
   border-radius: 12px;
+}
+
+@media(max-width: 1090px){
+  .output-side-wrapper{
+    margin-top: 4%;
+  }
 }
 
 .output-line {
@@ -119,7 +121,7 @@ input[type="button"] {
 }
 
 /* Images */
-img {
+.icon {
   position: absolute;
   padding-left: 14px;
   z-index: 1;
@@ -133,14 +135,11 @@ img {
   top: 42px;
 }
 
-
 /* Outputs' styles */
-
 output {
   font-size: 32px;
   color: hsl(172, 67%, 45%);
 }
-
 
 .output-label .biggerText {
   color: hsl(0, 0%, 100%);
@@ -153,10 +152,7 @@ output {
   margin: 0;
 }
 
-
-
 /* Reset button */
-
 button[type="reset"] {
   width: 100%;
   height: 40px;
@@ -170,8 +166,7 @@ button[type="reset"] {
   border-radius: 6px;
 }
 
-
-.warning{
+.warning {
   display: none;
   color: hsl(0, 100%, 74%);
   text-align: right;
