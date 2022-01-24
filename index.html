@@ -34,7 +34,10 @@
 
           <div class="input-line">
             <img class="icon icon-dollar" src="images/icon-dollar.svg" alt="">
-            <label for="sumInput">Bill</label>
+            <div class="hiddenWarningLine">
+              <label for="sumInput">Bill</label>
+              <span class="warning">Can't be zero</span>
+            </div>
             <input id="sumInput" type="text" name="sum" placeholder="0" onchange="form.submit()">
           </div>
 
@@ -72,7 +75,7 @@
             <p class="biggerText">Tip Amount</p>
             <p class="smallerText">/ person</p>
           </div>
-          <output form="dataInput" for="sumInput val5 val10 val15 val25 val50 valCustom numberOfPeopleInput" name="resultTipPerPerson">$0.00</output>
+          <output id ="id"form="dataInput" for="sumInput val5 val10 val15 val25 val50 valCustom numberOfPeopleInput" name="resultTipPerPerson">$0.00</output>
         </div>
 
 
@@ -94,17 +97,7 @@
     </div>
   </div>
 
-  <script type="text/javascript">
 
-  for (let i = 0; i<3; i++){
-    document.querySelectorAll("input[type='text']")[i].addEventListener("onchange", ()=>{
-      if(document.querySelectorAll("input[type='text']")[i].value.trim()!=""){
-        document.querySelector("button[type='reset']").classList.addClass("active");
-      }
-    })
-  }
-
-  </script>
 </body>
 
 </html>
